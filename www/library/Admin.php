@@ -3338,6 +3338,7 @@ class Admin extends User implements Main_Interface
         $this->tpl->define_dynamic('s_adress', 'edit');
         $this->tpl->define_dynamic('s_pos', 'edit');
         $this->tpl->define_dynamic('s_meta', 'edit');
+        $this->tpl->define_dynamic('name', 'edit');
         $this->tpl->define_dynamic('header', 'edit');
         $this->tpl->define_dynamic('s_visible', 'edit');
         $this->tpl->define_dynamic('top', 'edit');
@@ -3349,6 +3350,7 @@ class Admin extends User implements Main_Interface
         $href = $this->ru2Lat($this->getVar('adm_href', ''));
         $position = $this->getVar('position', 9999);
         $preview = $this->getVar('preview', '');
+        $name = $this->getVar('name', '');
         $header = $this->getVar('header', '');
         $title = $this->getVar('title', '');
         $keywords = $this->getVar('keywords', '');
@@ -3396,6 +3398,7 @@ class Admin extends User implements Main_Interface
                 'href' => $href,
                 'position' => $position,
                 'preview' => stripslashes($preview),
+                'name' => $name,
                 'header' => $header,
                 'title' => $title,
                 'keywords' => $keywords,
@@ -3430,6 +3433,7 @@ class Admin extends User implements Main_Interface
                         'ADM_BODY' => stripslashes($body),
                         'VISIBLE_S' => $visible_s,
                         'TOP_S' => $top_s,
+                        'ADM_NAME' => $name,
                         'ADM_HEADER' => $header,
                         'ADM_TITLE' => $title,
                         'ADM_KEYWORDS' => $keywords,
@@ -3441,6 +3445,8 @@ class Admin extends User implements Main_Interface
             $this->tpl->parse('CONTENT', '.start');
             $this->tpl->parse('CONTENT', '.mce');
             $this->tpl->parse('CONTENT', '.s_adress');
+            if ($type == 'link')
+                $this->tpl->parse('CONTENT', '.name');
             if ($type == 'link')
                 $this->tpl->parse('CONTENT', '.header');
             $this->tpl->parse('CONTENT', '.s_pos');
@@ -3501,6 +3507,7 @@ class Admin extends User implements Main_Interface
         $this->tpl->define_dynamic('s_pos', 'edit');
         $this->tpl->define_dynamic('s_meta', 'edit');
         $this->tpl->define_dynamic('s_post', 'edit');
+        $this->tpl->define_dynamic('name', 'edit');
         $this->tpl->define_dynamic('header', 'edit');
         $this->tpl->define_dynamic('s_visible', 'edit');
         $this->tpl->define_dynamic('top', 'edit');
@@ -3511,6 +3518,7 @@ class Admin extends User implements Main_Interface
         $href = $page['href'];
         $position = $page['position'];
         $preview = $page['preview'];
+        $name = $page['name'];
         $header = $page['header'];
         $title = $page['title'];
         $keywords = $page['keywords'];
@@ -3531,6 +3539,7 @@ class Admin extends User implements Main_Interface
 
             $position = $this->getVar('position', 9999);
             $preview = $this->getVar('preview', '');
+            $name = $this->getVar('name', '');
             $header = $this->getVar('header', '');
             $title = $this->getVar('title', '');
             $keywords = $this->getVar('keywords', '');
@@ -3577,6 +3586,7 @@ class Admin extends User implements Main_Interface
                 'href' => $href,
                 'position' => $position,
                 'preview' => stripslashes($preview),
+                'name' => $name,
                 'header' => $header,
                 'title' => $title,
                 'keywords' => $keywords,
@@ -3609,6 +3619,7 @@ class Admin extends User implements Main_Interface
                         'ADM_BODY' => $body,
                         'VISIBLE_S' => $visible_s,
                         'TOP_S' => $top_s,
+                        'ADM_NAME' => $name,
                         'ADM_HEADER' => $header,
                         'ADM_TITLE' => $title,
                         'ADM_KEYWORDS' => $keywords,
@@ -3625,6 +3636,8 @@ class Admin extends User implements Main_Interface
 
             if ($type == 'link')
                 $this->tpl->parse('CONTENT', '.header');
+            if ($type == 'link')
+                $this->tpl->parse('CONTENT', '.name');
             if ($type != 'mainpage')
                 $this->tpl->parse('CONTENT', '.s_pos');
             if ($type != 'mainpage')

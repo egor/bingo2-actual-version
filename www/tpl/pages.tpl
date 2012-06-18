@@ -7,7 +7,7 @@
 <div class="posts">
     <!-- BDP: section_row -->
     <div class="post">
-        <a href="{PAGE_ADRESS}" class="post_title" title="{PAGE_HEADER}">{PAGE_HEADER}</a>
+        <a href="{PAGE_ADRESS}" class="post_title" title="{PAGE_NAME}">{PAGE_NAME}</a>
         <div class="post_description">
             {PAGE_PREVIEW}
         </div>

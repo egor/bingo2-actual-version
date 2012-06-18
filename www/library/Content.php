@@ -156,6 +156,7 @@ class Content extends Main_Abstract implements Main_Interface {
                 array(
                     'PAGE_ID'           => $row['id'],
                     'PAGE_ADRESS'       => $url . $row['href'],
+                    'PAGE_NAME'         => (!empty($row['name'])?stripslashes($row['name']):stripslashes($row['header'])),
                     'PAGE_HEADER'       => stripslashes($row['header']),
                     'PAGE_PREVIEW'      => stripslashes($row['preview'])
                 )
