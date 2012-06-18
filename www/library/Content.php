@@ -644,6 +644,7 @@ class Content extends Main_Abstract implements Main_Interface {
                         'DATE'              => $this->convertDate($row['date']),
                         'NEWS_ADRESS'       => $row['href'],
                         'NEWS_HEADER'       => stripslashes($row['header']),
+                        'NEWS_NAME'       => stripslashes($row['name']),
                         'NEWS_PREVIEW'      => stripslashes($row['preview'])
                     )
                 );

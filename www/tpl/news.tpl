@@ -8,10 +8,10 @@
     <!-- BDP: news_item -->
     <div class="post">
         <!-- BDP: news_item_pic -->
-        <a href="/news/{NEWS_ADRESS}" title="{NEWS_HEADER}"><img src="{NEWS_ITEM_SRC_PIC}" class="post_image" alt="{NEWS_HEADER}" title="{NEWS_HEADER}" /></a>
+        <a href="/news/{NEWS_ADRESS}" title="{NEWS_NAME}"><img src="{NEWS_ITEM_SRC_PIC}" class="post_image" alt="{NEWS_NAME}" title="{NEWS_NAME}" /></a>
         <!-- EDP: news_item_pic -->
 
-        <a href="/news/{NEWS_ADRESS}" class="post_title" title="{NEWS_HEADER}">{NEWS_HEADER}</a>
+        <a href="/news/{NEWS_ADRESS}" class="post_title" title="{NEWS_NAME}">{NEWS_NAME}</a>
         <span class="post_date">{DATE}</span>
         <div class="post_description">
             {NEWS_PREVIEW}

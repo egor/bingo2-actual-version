@@ -131,7 +131,9 @@
 
 
 <!-- BDP: s_meta -->
-
+<tr>
+     <td>Название: &nbsp;&nbsp;&nbsp;</td><td><input type="text" size=50 name="name" value='{ADM_NAME}' class='admin-input-text' id='admin-input-header'><br></td>
+</tr>
 <tr>
      <td>Header: &nbsp;&nbsp;&nbsp;</td><td><input type="text" size=50 name="header" value='{ADM_HEADER}' class='admin-input-text' id='admin-input-header'><br></td>
 </tr>

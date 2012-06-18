@@ -66,6 +66,7 @@ class Admin extends User implements Main_Interface
         $topnews = $this->getVar('topnews', 0);
         $date = $this->getVar('date', date('d.m.Y'));
         $preview = $this->getVar('preview', '');
+        $name = $this->getVar('name', '');
         $header = $this->getVar('header', '');
         $title = $this->getVar('title', '');
         $keywords = $this->getVar('keywords', '');
@@ -118,6 +119,7 @@ class Admin extends User implements Main_Interface
                 'top' => $topnews,
                 'date' => $date,
                 'preview' => stripslashes($preview),
+                'name' => $name,
                 'header' => $header,
                 'title' => $title,
                 'keywords' => $keywords,
@@ -162,6 +164,7 @@ class Admin extends User implements Main_Interface
                         'ADM_PREVIEW' => stripslashes($preview),
                         'ADM_BODY' => stripslashes($body),
                         'VISIBLE_S' => $visible_s,
+                        'ADM_NAME' => $name,
                         'ADM_HEADER' => $header,
                         'ADM_TITLE' => $title,
                         'ADM_KEYWORDS' => $keywords,
@@ -225,6 +228,7 @@ class Admin extends User implements Main_Interface
         $date = $this->convertDate($news['date']);
 
         $preview = $news['preview'];
+        $name = $news['name'];
         $header = $news['header'];
         $title = $news['title'];
         $keywords = $news['keywords'];
@@ -255,6 +259,7 @@ class Admin extends User implements Main_Interface
             $topnews = $this->getVar('topnews', 0);
             $date = $this->getVar('date', date('d.m.Y'));
             $preview = $this->getVar('preview', '');
+            $name = $this->getVar('name', '');
             $header = $this->getVar('header', '');
             $title = $this->getVar('title', '');
             $keywords = $this->getVar('keywords', '');
@@ -304,6 +309,7 @@ class Admin extends User implements Main_Interface
                 'top' => $topnews,
                 'date' => $date,
                 'preview' => stripslashes($preview),
+                'name' => $name,
                 'header' => $header,
                 'title' => $title,
                 'keywords' => $keywords,
@@ -346,6 +352,7 @@ class Admin extends User implements Main_Interface
                         'ADM_PREVIEW' => stripslashes($preview),
                         'ADM_BODY' => stripslashes($body),
                         'VISIBLE_S' => $visible_s,
+                        'ADM_NAME' => $name,
                         'ADM_HEADER' => $header,
                         'ADM_TITLE' => $title,
                         'ADM_KEYWORDS' => $keywords,
